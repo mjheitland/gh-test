@@ -22,9 +22,9 @@ jobs:
       - name: step-1
         shell: bash
         run: |
-          printf 'Hello %s\n' "{{ $env.MY_ENV_VAR }}"
+          printf 'Hello %s\n' ${{ $env.MY_ENV_VAR }}
 
       - name: step-2
         shell: bash
         run: |
-          printf 'Hello %s\n' "{{ $env.MY_ENV_VAR }}"
+          printf 'Hello %s\n' ${{ $env.MY_ENV_VAR }}
