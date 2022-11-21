@@ -1,0 +1,25 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+  contents: write
+  packages: write
+
+env:
+  MY_ENV_VAR: "some value"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step-1
+        shell: bash
+        run: printf 'Hello %s\n' {{ env.MY_ENV_VAR }}
+
+      - name: step-2
+        shell: bash
+        run: printf 'Hello %s\n' {{ env.MY_ENV_VAR }}
