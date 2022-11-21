@@ -17,12 +17,13 @@ permissions:
   contents: write
   packages: write
 
-env:
-  MY_ENV_VAR: initial value
-
 jobs:
+
   test:
     runs-on: ubuntu-latest
+
+    env:
+      MY_ENV_VAR: initial value
 
     steps:
 
