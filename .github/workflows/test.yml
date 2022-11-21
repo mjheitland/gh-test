@@ -30,7 +30,7 @@ jobs:
         shell: bash
         run: |
           printf 'Hello %s\n' "$MY_ENV_VAR"
-          echo "{MY_ENV_VAR}='new value'" >> $GITHUB_ENV
+          echo "MY_ENV_VAR=new value" >> $GITHUB_ENV
           printf 'Hello %s\n' "$MY_ENV_VAR"
 
       - name: step-2
