@@ -22,9 +22,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      MY_ENV_VAR: initial value
-
     steps:
 
       - name: step-0
